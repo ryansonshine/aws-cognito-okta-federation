@@ -23,10 +23,10 @@ export class CdkStack extends Stack {
       appClientCallbackUrl: config.appClientCallbackUrl,
       userPoolCognitoDomain: config.userPoolCognitoDomain
     });
-    
+
     // Endpoint Lambda handler
     const hello = new lambda.Function(this, 'HelloHandler',{
-      runtime: lambda.Runtime.NODEJS_14_X,
+      runtime: lambda.Runtime.NODEJS_18_X,
       code: lambda.Code.fromAsset('lambda'),
       handler: 'hello.handler'
     })
